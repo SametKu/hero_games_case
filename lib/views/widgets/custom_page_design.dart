@@ -56,7 +56,8 @@ class BaseDesign extends StatelessWidget {
                           style: const TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.w600,
-                              fontSize: 16),
+                              fontSize: 16,
+                              fontFamily: "Inter"),
                         ),
                       ),
                     ),
