@@ -28,10 +28,11 @@ class BaseDesign extends StatelessWidget {
             height: topPadding,
           ),
           Padding(
-            padding: padding ?? const EdgeInsets.symmetric(horizontal: 5),
+            padding: padding ?? const EdgeInsets.symmetric(horizontal: 16),
             child: SizedBox(
               width: double.infinity,
               child: Stack(
+                alignment: Alignment.center,
                 children: [
                   !noBackBtn
                       ? Align(
@@ -49,7 +50,7 @@ class BaseDesign extends StatelessWidget {
                     Align(
                       alignment: Alignment.center,
                       child: Padding(
-                        padding: const EdgeInsets.only(top: 12),
+                        padding: const EdgeInsets.only(top: 10),
                         child: Text(
                           midTitle!,
                           style: const TextStyle(
