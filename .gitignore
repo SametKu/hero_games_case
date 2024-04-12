@@ -10,6 +10,19 @@
 .svn/
 migrate_working_dir/
 
+# Files and directories created by pub
+.dart_tool/
+.packages
+build/
+node_modules/
+windows/
+web/
+macos/
+linux/
+
+# If you're building an application, you may want to check-in your pubspec.lock
+pubspec.lock
+
 # IntelliJ related
 *.iml
 *.ipr
@@ -42,3 +55,5 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+
