@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class BaseDesign extends StatelessWidget {
   const BaseDesign(
       {super.key,
+      required this.child,
       this.backgroundColor,
       this.topRightIcon,
       this.midTitle,
@@ -17,6 +18,7 @@ class BaseDesign extends StatelessWidget {
   final double topPadding;
   final EdgeInsetsGeometry? padding;
   final Function()? backBtnPressed;
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {
@@ -65,6 +67,9 @@ class BaseDesign extends StatelessWidget {
                 ],
               ),
             ),
+          ),
+          SizedBox(
+            child: child,
           )
         ],
       ),
