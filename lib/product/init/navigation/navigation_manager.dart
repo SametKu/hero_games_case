@@ -16,7 +16,7 @@ class NavigationService implements INavigationService {
     var exPage = AppSettings.instance.currentPage;
     AppSettings.instance.pageStackCount += 1;
     AppSettings.instance.currentPage = path;
-    AppSettings.instance.navigatorKey.currentState
+    return await AppSettings.instance.navigatorKey.currentState
         ?.pushNamed(path, arguments: data)
         .then((value) {
       AppSettings.instance.currentPage = exPage;
@@ -24,6 +24,5 @@ class NavigationService implements INavigationService {
       if (poppedBack != null) poppedBack();
       return value;
     });
-    return null;
   }
 }

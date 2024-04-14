@@ -9,12 +9,14 @@ class BaseDesign extends StatelessWidget {
       this.noBackBtn = false,
       this.topPadding = 20,
       this.backBtnPressed,
-      this.padding});
+      this.padding,
+      required this.child});
   final Color? backgroundColor;
   final Widget? topRightIcon;
   final String? midTitle;
   final bool noBackBtn;
   final double topPadding;
+  final Widget child;
   final EdgeInsetsGeometry? padding;
   final Function()? backBtnPressed;
 
@@ -67,7 +69,8 @@ class BaseDesign extends StatelessWidget {
                 ],
               ),
             ),
-          )
+          ),
+          child
         ],
       ),
     );

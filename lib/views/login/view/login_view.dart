@@ -25,6 +25,15 @@ class _LoginViewState extends State<LoginView> {
       backBtnPressed: () {
         NavigationEnums.doctorDetail.navigeToPage();
       },
+      child: Column(
+        children: [
+          for (int i = 0; i < 10; i++)
+            const Text(
+              "data",
+              style: TextStyle(color: Colors.black),
+            )
+        ],
+      ),
     );
   }
 }

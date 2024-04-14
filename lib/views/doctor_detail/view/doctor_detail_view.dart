@@ -19,6 +19,9 @@ class _DoctorDetailState extends State<DoctorDetail> {
       },
       midTitle: 'SAMET',
       noBackBtn: false,
+      child: const Column(
+        children: [],
+      ),
     );
   }
 }
