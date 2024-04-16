@@ -4,7 +4,7 @@ extension NavigationConstantsValue on NavigationEnums {
   String get rawValue {
     switch (this) {
       case NavigationEnums.deafult:
-        return '/home';
+        return '/deafult';
       case NavigationEnums.login:
         return '/login';
       case NavigationEnums.doctorDetail:

@@ -35,7 +35,7 @@ dependencies:
   page_transition:
   get:
   provider:
-   
+  google_fonts: 6.1.0 
 
 
   # The following adds the Cupertino Icons font to your application.

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hero_games/core/states/global_states.dart';
 
 class BaseDesign extends StatelessWidget {
   const BaseDesign(
@@ -27,10 +28,10 @@ class BaseDesign extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(
-            height: topPadding,
+            height: appFonts.px(topPadding, Axis.vertical),
           ),
           Padding(
-            padding: padding ?? const EdgeInsets.symmetric(horizontal: 16),
+            padding: padding ?? appFonts.paddingSymetric(horizontal: 16),
             child: SizedBox(
               width: double.infinity,
               child: Stack(
@@ -51,16 +52,13 @@ class BaseDesign extends StatelessWidget {
                   if (midTitle != null)
                     Align(
                       alignment: Alignment.center,
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 10),
-                        child: Text(
-                          midTitle!,
-                          style: const TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 16,
-                              fontFamily: "Inter"),
-                        ),
+                      child: Text(
+                        midTitle!,
+                        style: const TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                            fontFamily: "Inter"),
                       ),
                     ),
                   if (topRightIcon != null)
