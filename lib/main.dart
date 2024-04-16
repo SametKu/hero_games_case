@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_core/get_core.dart';
 import 'package:get/get_instance/get_instance.dart';
+import 'package:hero_games/core/states/app_fonts.dart';
 import 'package:hero_games/core/states/app_settings.dart';
+import 'package:hero_games/core/states/global_states.dart';
 import 'package:hero_games/product/init/navigation/navigation_manager.dart';
 import 'package:hero_games/product/init/navigation/navigation_route.dart';
 import 'package:provider/provider.dart';
 
 void main() {
   Get.put(AppSettings());
+
   runApp(MultiProvider(
     providers: [Provider(create: (context) => NavigationService())],
     child: const MyApp(),
@@ -25,6 +28,7 @@ class _MyAppState extends State<MyApp> {
   final _navigatorKey = GlobalKey<NavigatorState>();
   @override
   Widget build(BuildContext context) {
+    appFonts = AppFonts.init(context);
     return MaterialApp(
       key: _navigatorKey,
       navigatorKey: AppSettings.instance.navigatorKey,

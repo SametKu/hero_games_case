@@ -16,6 +16,7 @@ class _LoginViewState extends State<LoginView> {
       noBackBtn: true,
       topRightIcon: IconButton(
           onPressed: () {}, icon: const Icon(Icons.notification_add)),
+      child: const Center(),
     );
   }
 }

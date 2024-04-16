@@ -8,7 +8,7 @@ class BaseDesign extends StatelessWidget {
       this.topRightIcon,
       this.midTitle,
       this.noBackBtn = false,
-      this.topPadding = 60,
+      this.topPadding = 20,
       this.backBtnPressed,
       this.padding});
   final Color? backgroundColor;

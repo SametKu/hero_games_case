@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hero_games/core/constants/color_constants.dart';
+import 'package:hero_games/core/states/global_states.dart';
 import 'package:hero_games/product/init/extensions/navigation_enum.dart';
 import 'package:hero_games/product/init/navigation/navigation_enums.dart';
 import 'package:hero_games/views/widgets/custom_page_design.dart';
@@ -19,6 +21,12 @@ class _SplashViewState extends State<SplashView> {
       backBtnPressed: () {
         NavigationEnums.login.navigationToPage();
       },
+      child: Column(children: [
+        Text(
+          "asd",
+          style: appFonts.style(fontSize: 40, color: ColorConstants.colorDark),
+        )
+      ]),
     );
   }
 }
