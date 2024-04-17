@@ -1,4 +1,4 @@
-enum NavigationEnums { deafult, login, doctorDetail }
+enum NavigationEnums { deafult, login, doctorDetail, onBoarding }
 
 extension NavigationConstantsValue on NavigationEnums {
   String get rawValue {
@@ -9,6 +9,8 @@ extension NavigationConstantsValue on NavigationEnums {
         return '/login';
       case NavigationEnums.doctorDetail:
         return '/doctorDetail';
+      case NavigationEnums.onBoarding:
+        return '/onBoarding';
     }
   }
 
@@ -20,6 +22,8 @@ extension NavigationConstantsValue on NavigationEnums {
         return NavigationEnums.login;
       case '/doctorDetail':
         return NavigationEnums.doctorDetail;
+      case '/onBoarding':
+        return NavigationEnums.onBoarding;
 
       default:
         throw Exception('$val not found in $this');

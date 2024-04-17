@@ -3,6 +3,7 @@ import 'package:hero_games/core/states/app_settings.dart';
 import 'package:hero_games/product/init/navigation/navigation_enums.dart';
 import 'package:hero_games/views/doctor_detail/view/doctor_detail_view.dart';
 import 'package:hero_games/views/login/view/login_view.dart';
+import 'package:hero_games/views/onboarding_screen/view/onboarding_view.dart';
 import 'package:hero_games/views/splash_view/view/splash_view.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -15,6 +16,8 @@ class NavigationRoute {
         return _normalNavigate(const LoginView());
       case NavigationEnums.doctorDetail:
         return _normalNavigate(const DoctorDetail());
+      case NavigationEnums.onBoarding:
+        return _normalNavigate(const OnBoardingScreen());
       default:
         throw Exception('$this not found');
     }
