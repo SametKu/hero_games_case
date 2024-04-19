@@ -1,11 +1,11 @@
 import 'package:hero_games/core/states/app_settings.dart';
 import 'package:page_transition/page_transition.dart';
 
-abstract class INavigationServices {
+abstract class INavigationService {
   Future<Object?> navigateToPage<T>({required String path, Object? data});
 }
 
-class NavigationService implements INavigationServices {
+class NavigationService implements INavigationService {
   @override
   Future<Object?> navigateToPage<T>(
       {required String path,

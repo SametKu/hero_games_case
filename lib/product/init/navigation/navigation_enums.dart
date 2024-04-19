@@ -1,16 +1,16 @@
-enum NavigationEnums { home, login, register, deafult }
+enum NavigationEnums { deafult, login, doctorDetail, onboarding }
 
 extension NavigationConstantsValue on NavigationEnums {
   String get rawValue {
     switch (this) {
-      case NavigationEnums.home:
-        return "/home";
-      case NavigationEnums.login:
-        return "/login";
-      case NavigationEnums.register:
-        return "/register";
       case NavigationEnums.deafult:
         return '/deafult';
+      case NavigationEnums.login:
+        return '/login';
+      case NavigationEnums.doctorDetail:
+        return '/doctorDetail';
+      case NavigationEnums.onboarding:
+        return '/onboarding';
     }
   }
 
@@ -18,12 +18,12 @@ extension NavigationConstantsValue on NavigationEnums {
     switch (val) {
       case '/':
         return NavigationEnums.deafult;
-      case '/home':
-        return NavigationEnums.home;
       case '/login':
         return NavigationEnums.login;
-      case '/register':
-        return NavigationEnums.register;
+      case '/doctorDetail':
+        return NavigationEnums.doctorDetail;
+      case '/onboarding':
+        return NavigationEnums.onboarding;
       default:
         throw Exception('$val not found in $this');
     }

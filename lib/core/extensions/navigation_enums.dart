@@ -5,7 +5,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 extension NavigationEnumsExt on NavigationEnums {
-  Future<Object?> navigationToPage(
+  Future<Object?> navigeToPage(
       {Object? data,
       PageTransitionType type = PageTransitionType.rightToLeft,
       dynamic Function()? poppedBack}) async {

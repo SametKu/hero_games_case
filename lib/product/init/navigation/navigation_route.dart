@@ -1,7 +1,9 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:hero_games/core/states/app_settings.dart';
 import 'package:hero_games/product/init/navigation/navigation_enums.dart';
+import 'package:hero_games/views/doctor_detail/view/doctor_detail_view.dart';
 import 'package:hero_games/views/login/view/login_view.dart';
+import 'package:hero_games/views/onboarding/view/onboarding_view.dart';
 import 'package:hero_games/views/splash/view/splash_view.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -10,13 +12,12 @@ class NavigationRoute {
     switch (NavigationEnums.deafult.normalValue(routeSettings.name)) {
       case NavigationEnums.deafult:
         return _normalNavigate(const SplashView());
-
+      case NavigationEnums.onboarding:
+        return _normalNavigate(const OnboardingView());
       case NavigationEnums.login:
         return _normalNavigate(const LoginView());
-      case NavigationEnums.home:
-        return _normalNavigate(const LoginView());
-      case NavigationEnums.register:
-        return _normalNavigate(const LoginView());
+      case NavigationEnums.doctorDetail:
+        return _normalNavigate(const DoctorDetail());
       default:
         throw Exception('$this not found');
     }
@@ -24,8 +25,8 @@ class NavigationRoute {
 
   PageTransition _normalNavigate(Widget widget) {
     return PageTransition(
-        type: AppSettings.instance.pageTransitionType,
         child: widget,
+        type: AppSettings.instance.pageTransitionType,
         duration: const Duration(milliseconds: 200));
   }
 }

@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:get/get_core/get_core.dart';
 import 'package:get/get_instance/get_instance.dart';
@@ -8,10 +6,18 @@ import 'package:hero_games/core/constants/color_constants.dart';
 
 class AppFonts {
   late double _appHeight, _appWidth;
+
   // ignore: prefer_final_fields
   double _figmaHeight = 812, _figmaWidth = 375;
 
   Size get size => Size(_appWidth, _appHeight);
+
+  void _setSize(Size size) {
+    _appHeight = size.height;
+    _appWidth = size.width;
+  }
+
+  static AppFonts get instance => Get.find<AppFonts>();
 
   static AppFonts init(BuildContext context) {
     var state = Get.put(AppFonts());
@@ -19,28 +25,20 @@ class AppFonts {
     return state;
   }
 
-  static AppFonts get instance => Get.find<AppFonts>();
-
-  void _setSize(Size size) {
-    _appHeight = size.height;
-    _appWidth = size.width;
-  }
-
-  TextStyle style({
-    Color color = ColorConstants.colorBackground,
-    Color? decorationColor,
-    List<Shadow>? shadows,
-    double fontSize = 16,
-    FontWeight fontWeight = FontWeight.w600,
-    String fontFamily = 'Source Sans 3',
-    TextDecoration? decoration,
-    double? height,
-    TextStyle? textStyle,
-    double? letterSpacing,
-  }) {
+  TextStyle style(
+      {Color color = ColorConstants.colorBackground,
+      Color? decorationColor,
+      List<Shadow>? shadows,
+      double fontSize = 16,
+      FontWeight fontWeight = FontWeight.w600,
+      String fontFamily = 'Inter',
+      TextDecoration? decoration,
+      double? height,
+      TextStyle? textStyle,
+      double? letterSpacing}) {
     return GoogleFonts.getFont(fontFamily,
-        color: color,
         fontSize: textStylePx(fontSize),
+        color: color,
         height: height,
         letterSpacing: letterSpacing,
         shadows: shadows,
@@ -72,26 +70,24 @@ class AppFonts {
 
   EdgeInsetsGeometry paddingOnly(
           {double left = 0,
-          double top = 0,
           double right = 0,
+          double top = 0,
           double bottom = 0}) =>
       EdgeInsets.only(
           left: px(left, Axis.horizontal),
-          top: px(top, Axis.vertical),
           right: px(right, Axis.horizontal),
+          top: px(top, Axis.vertical),
           bottom: px(bottom, Axis.vertical));
 
   EdgeInsetsGeometry paddingAll(double value) => EdgeInsets.only(
       left: px(value, Axis.horizontal),
-      top: px(value, Axis.vertical),
       right: px(value, Axis.horizontal),
+      top: px(value, Axis.vertical),
       bottom: px(value, Axis.vertical));
 
-  EdgeInsetsGeometry paddingSymmetric({
-    double vertical = 0,
-    double horizontal = 0,
-  }) =>
+  EdgeInsetsGeometry paddingSymetric(
+          {double vertical = 0, double horizontal = 0}) =>
       EdgeInsets.symmetric(
-          vertical: px(vertical, Axis.vertical),
-          horizontal: px(horizontal, Axis.horizontal));
+          horizontal: px(horizontal, Axis.horizontal),
+          vertical: px(vertical, Axis.vertical));
 }
