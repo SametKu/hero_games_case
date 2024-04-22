@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:hero_games/core/constants/color_constants.dart';
 import 'package:hero_games/core/states/global_states.dart';
@@ -28,6 +29,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   @override
   Widget build(BuildContext context) {
     return BaseDesign(
+        value: SystemUiOverlayStyle.light,
         topPadding: 0,
         noBackBtn: true,
         child: Column(

@@ -14,4 +14,13 @@ extension NavigationEnumsExt on NavigationEnums {
         .navigateToPage(
             path: rawValue, data: data, poppedBack: poppedBack, type: type);
   }
+
+  Future<void> navigateToPageReplacement({
+    Object? data,
+    PageTransitionType type = PageTransitionType.rightToLeft,
+  }) async {
+    AppSettings.instance.context!
+        .read<NavigationService>()
+        .navigateToPageReplacement(path: rawValue, data: data, type: type);
+  }
 }
