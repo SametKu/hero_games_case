@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:hero_games/core/states/app_settings.dart';
 import 'package:hero_games/product/init/navigation/navigation_manager.dart';
@@ -25,6 +26,10 @@ class _MyAppState extends State<MyApp> {
   final _navigatorKey = GlobalKey<NavigatorState>();
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      // statusBarBrightness: Brightness.light,
+    ));
     return MaterialApp(
       key: _navigatorKey,
       debugShowCheckedModeBanner: false,
