@@ -23,7 +23,7 @@ class _SplashViewState extends State<SplashView> {
           Center(
             child: ElevatedButton(
                 onPressed: () {
-                  NavigationEnums.onboarding.navigeToPage();
+                  NavigationEnums.onBoarding.navigeToPage();
                 },
                 child: const Text("OnBoarding")),
           )

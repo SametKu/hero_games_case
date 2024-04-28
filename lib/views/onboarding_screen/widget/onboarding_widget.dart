@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hero_games/core/constants/color_constants.dart';
 import 'package:hero_games/core/states/global_states.dart';
-import 'package:hero_games/views/figma_to_flutter/figma_container.dart';
-import 'package:hero_games/views/figma_to_flutter/sized_figma_text.dart';
+import 'package:hero_games/views/widgets/figma_to_flutter/figma_container.dart';
+import 'package:hero_games/views/widgets/figma_to_flutter/sized_figma_text.dart';
 import 'package:hero_games/views/onboarding_screen/model/onboarding_item.dart';
 
 class OnboardingViewItem extends StatelessWidget {
