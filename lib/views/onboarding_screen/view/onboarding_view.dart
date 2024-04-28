@@ -37,7 +37,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           children: [
             FigmaBox(
               //color: Colors.red,
-              height: 670,
+              height: 680,
               child: PageView(
                 controller: model.pageController,
                 children: [

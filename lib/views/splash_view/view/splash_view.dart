@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hero_games/core/constants/image_paths.dart';
-import 'package:hero_games/core/extensions/navigation_enums.dart';
 import 'package:hero_games/core/states/app_fonts.dart';
 import 'package:hero_games/core/states/global_states.dart';
-import 'package:hero_games/product/init/navigation/navigation_enums.dart';
+import 'package:hero_games/views/splash_view/model/splash_view_model.dart';
 import 'package:hero_games/views/widgets/custom_page_design.dart';
-import 'package:page_transition/page_transition.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -17,15 +15,12 @@ class SplashView extends StatefulWidget {
 
 class _SplashViewState extends State<SplashView>
     with SingleTickerProviderStateMixin {
+  var model = SplashViewModel();
   @override
   void initState() {
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
-    Future.delayed(
-      const Duration(seconds: 5),
-      () => NavigationEnums.onBoarding
-          .navigateToPageReplacement(type: PageTransitionType.fade),
-    );
+    model.goOnbardingPage();
   }
 
   @override
