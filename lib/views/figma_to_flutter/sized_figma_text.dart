@@ -15,7 +15,7 @@ class SFigmaText extends StatelessWidget {
       this.textDirection,
       this.locale,
       this.softWrap,
-      this.textScaleFactor = 1.0,
+      this.textScaleFactor,
       this.semanticsLabel,
       this.textWidthBasis,
       this.textHeightBehavior,
@@ -33,7 +33,7 @@ class SFigmaText extends StatelessWidget {
   final TextDirection? textDirection;
   final Locale? locale;
   final bool? softWrap;
-  final double textScaleFactor;
+  final double? textScaleFactor;
   final String? semanticsLabel;
   final TextWidthBasis? textWidthBasis;
   final TextHeightBehavior? textHeightBehavior;
@@ -58,7 +58,7 @@ class SFigmaText extends StatelessWidget {
             strutStyle: strutStyle,
             textDirection: textDirection,
             locale: locale,
-            textScaler: TextScaler.linear(textScaleFactor),
+            textScaleFactor: textScaleFactor,
             semanticsLabel: semanticsLabel,
             textWidthBasis: textWidthBasis,
             textHeightBehavior: textHeightBehavior,
