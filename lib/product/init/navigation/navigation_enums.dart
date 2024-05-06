@@ -1,4 +1,4 @@
-enum NavigationEnums { deafult, login, doctorDetail, onBoarding }
+enum NavigationEnums { deafult, login, signup, doctorDetail, onBoarding }
 
 extension NavigationConstantsValue on NavigationEnums {
   String get rawValue {
@@ -7,6 +7,8 @@ extension NavigationConstantsValue on NavigationEnums {
         return '/deafult';
       case NavigationEnums.login:
         return '/login';
+      case NavigationEnums.signup:
+        return '/signup';
       case NavigationEnums.doctorDetail:
         return '/doctorDetail';
       case NavigationEnums.onBoarding:
@@ -20,6 +22,8 @@ extension NavigationConstantsValue on NavigationEnums {
         return NavigationEnums.deafult;
       case '/login':
         return NavigationEnums.login;
+      case '/signup':
+        return NavigationEnums.signup;
       case '/doctorDetail':
         return NavigationEnums.doctorDetail;
       case '/onBoarding':

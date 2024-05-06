@@ -9,7 +9,7 @@ class BaseDesign extends StatelessWidget {
       this.topRightIcon,
       this.midTitle,
       this.noBackBtn = false,
-      this.topPadding = 20,
+      this.topPadding = 60,
       this.backBtnPressed,
       this.padding,
       required this.child,

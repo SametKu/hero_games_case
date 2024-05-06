@@ -48,6 +48,98 @@ class AppFonts {
         textStyle: textStyle);
   }
 
+  TextStyle p12(
+      {Color color = ColorConstants.colorBackground,
+      Color? decorationColor,
+      List<Shadow>? shadows,
+      double fontSize = 12,
+      FontWeight fontWeight = FontWeight.w600,
+      String fontFamily = 'Inter',
+      TextDecoration? decoration,
+      double? height,
+      TextStyle? textStyle,
+      double? letterSpacing}) {
+    return GoogleFonts.getFont(fontFamily,
+        fontSize: textStylePx(fontSize),
+        color: color,
+        height: height,
+        letterSpacing: letterSpacing,
+        shadows: shadows,
+        decorationColor: decorationColor,
+        fontWeight: fontWeight,
+        decoration: decoration,
+        textStyle: textStyle);
+  }
+
+  TextStyle p14(
+      {Color color = ColorConstants.colorBackground,
+      Color? decorationColor,
+      List<Shadow>? shadows,
+      double fontSize = 14,
+      FontWeight fontWeight = FontWeight.w600,
+      String fontFamily = 'Inter',
+      TextDecoration? decoration,
+      double? height,
+      TextStyle? textStyle,
+      double? letterSpacing}) {
+    return GoogleFonts.getFont(fontFamily,
+        fontSize: textStylePx(fontSize),
+        color: color,
+        height: height,
+        letterSpacing: letterSpacing,
+        shadows: shadows,
+        decorationColor: decorationColor,
+        fontWeight: fontWeight,
+        decoration: decoration,
+        textStyle: textStyle);
+  }
+
+  TextStyle p16(
+      {Color color = ColorConstants.colorBackground,
+      Color? decorationColor,
+      List<Shadow>? shadows,
+      double fontSize = 16,
+      FontWeight fontWeight = FontWeight.w600,
+      String fontFamily = 'Inter',
+      TextDecoration? decoration,
+      double? height,
+      TextStyle? textStyle,
+      double? letterSpacing}) {
+    return GoogleFonts.getFont(fontFamily,
+        fontSize: textStylePx(fontSize),
+        color: color,
+        height: height,
+        letterSpacing: letterSpacing,
+        shadows: shadows,
+        decorationColor: decorationColor,
+        fontWeight: fontWeight,
+        decoration: decoration,
+        textStyle: textStyle);
+  }
+
+  TextStyle p20(
+      {Color color = ColorConstants.colorBackground,
+      Color? decorationColor,
+      List<Shadow>? shadows,
+      double fontSize = 20,
+      FontWeight fontWeight = FontWeight.w600,
+      String fontFamily = 'Inter',
+      TextDecoration? decoration,
+      double? height,
+      TextStyle? textStyle,
+      double? letterSpacing}) {
+    return GoogleFonts.getFont(fontFamily,
+        fontSize: textStylePx(fontSize),
+        color: color,
+        height: height,
+        letterSpacing: letterSpacing,
+        shadows: shadows,
+        decorationColor: decorationColor,
+        fontWeight: fontWeight,
+        decoration: decoration,
+        textStyle: textStyle);
+  }
+
   double textStylePx(double px) {
     return _appHeight * (px / _figmaHeight);
   }

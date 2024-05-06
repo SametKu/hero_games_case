@@ -34,10 +34,10 @@ abstract class _OnBoardingViewModelBase with Store {
   @action
   Future<void> nextPage() async {
     if (pageIndex == items.length - 1) {
-      await NavigationEnums.login.navigeToPage();
+      await NavigationEnums.signup.navigeToPage();
     } else {
       pageController.nextPage(
-          duration: const Duration(milliseconds: 200), curve: Curves.easeIn);
+          duration: const Duration(milliseconds: 300), curve: Curves.easeIn);
     }
   }
 
