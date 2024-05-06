@@ -30,7 +30,7 @@ class _MyAppState extends State<MyApp> {
       statusBarColor: Colors.transparent,
       // statusBarBrightness: Brightness.light,
     ));
-    return MaterialApp(
+    return GetMaterialApp(
       key: _navigatorKey,
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',

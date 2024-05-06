@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hero_games/core/constants/icon_paths.dart';
 import 'package:hero_games/core/extensions/navigation_enums.dart';
 import 'package:hero_games/product/init/navigation/navigation_enums.dart';
@@ -15,6 +16,7 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return BaseDesign(
+      value: SystemUiOverlayStyle.dark,
       topPadding: 25,
       midTitle: "Doctor Details",
       noBackBtn: false,
