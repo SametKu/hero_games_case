@@ -1,3 +1,4 @@
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:hero_games/core/extensions/navigation_enums.dart';
 import 'package:hero_games/product/init/navigation/navigation_enums.dart';
@@ -14,8 +15,9 @@ class _DoctorDetailState extends State<DoctorDetail> {
   @override
   Widget build(BuildContext context) {
     return BaseDesign(
+      value: SystemUiOverlayStyle.dark,
       backBtnPressed: () {
-        NavigationEnums.login.navigeToPage();
+        NavigationEnums.onBoarding.navigeToPage();
       },
       midTitle: 'SAMET',
       noBackBtn: false,

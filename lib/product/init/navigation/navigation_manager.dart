@@ -25,4 +25,16 @@ class NavigationService implements INavigationService {
       return value;
     });
   }
+
+  Future<T?> navigateToPageReplacement<T>({
+    required String path,
+    Object? data,
+    PageTransitionType type = PageTransitionType.rightToLeft,
+  }) async {
+    AppSettings.instance.pageTransitionType = type;
+    AppSettings.instance.pageStackCount = 1;
+    AppSettings.instance.currentPage = path;
+    return await AppSettings.instance.navigatorKey.currentState
+        ?.pushReplacementNamed(path, arguments: data);
+  }
 }
